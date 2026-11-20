@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-deep font-body text-cream antialiased;
+  }
+
+  ::selection {
+    @apply bg-ember text-deep;
+  }
+}
+
+@layer components {
+  /* Large pill button used for the main calls to action */
+  .btn-pill {
+    @apply inline-flex items-center gap-3 rounded-full px-8 py-4 font-display text-base font-extrabold transition duration-300 md:text-lg;
+  }
+
+  .btn-ember {
+    @apply bg-ember text-deep hover:-translate-y-1 hover:bg-butter hover:shadow-xl;
+  }
+
+  .btn-butter {
+    @apply bg-butter text-ink hover:-translate-y-1 hover:bg-ember hover:shadow-xl;
+  }
+}
